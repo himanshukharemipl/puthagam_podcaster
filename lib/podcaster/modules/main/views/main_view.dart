@@ -17,7 +17,7 @@ class MainView extends GetView<MainController> {
       body: SafeArea(
           child: Column(
         children: [
-          "Hi ${LocalStorage.readName()}".text.size(22).bold.make(),
+          "Hi, ${LocalStorage.readName()}".text.size(22).bold.make(),
           20.heightBox,
           "Select your podcast".text.gray500.make(),
           20.heightBox,
