@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:audio_picker/audio_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -92,24 +91,16 @@ class MainController extends GetxController
   uploadAudio(String episode) async {
     try {
       String path = await AudioPicker.pickAudio();
-      if (path != null) {
-        buildDialogLoadingIndicator();
-        File file = File(path );
-        final player = AudioPlayer();
-        var duration = await player.setUrl(file.path);
-        final minutes = (duration!.inSeconds / 60).roundToDouble();
-        final response = await repository.uploadAudio(
-            LocalStorage.readAuthorID(),
-            selectedPodcast,
-            episode,
-            minutes,
-            file);
-        Get.back();
-        if (response.data != null) {
-          showToastMessage(title: "Success", message: "Episode uploaded");
-        }
-      } else {
-        // User canceled the picker
+      buildDialogLoadingIndicator();
+      File file = File(path);
+      final player = AudioPlayer();
+      var duration = await player.setUrl(file.path);
+      final minutes = (duration!.inSeconds / 60).roundToDouble();
+      final response = await repository.uploadAudio(
+          LocalStorage.readAuthorID(), selectedPodcast, episode, minutes, file);
+      Get.back();
+      if (response.data != null) {
+        showToastMessage(title: "Success", message: "Episode uploaded");
       }
     } catch (err) {
       log("err $err");

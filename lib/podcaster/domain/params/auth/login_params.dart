@@ -10,7 +10,7 @@ class LoginParams {
       );
 
   Map<String, dynamic> toJson() => {
-        'email': email,
-        'password': password,
+        "emailOrPhone": "lee@yopmail.com",
+        "authKey": "a553ac68-58a6-476f-ba54-40459765a1a7",
       };
 }

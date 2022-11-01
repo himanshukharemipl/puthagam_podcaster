@@ -18,7 +18,6 @@ dependencies:
   get_storage: ^2.0.3
   retrofit: ^3.0.1
   intl: 0.17.0
-  audio_picker: ^1.0.0
   audio_waveforms: ^0.1.5+1
   lottie: 1.4.3
   just_audio: ^0.9.29
@@ -28,6 +27,10 @@ dependencies:
     git:
       url: https://github.com/kuzalex2/flutter_rtmp_streamer.git
       ref: develop
+  audio_picker:
+    git:
+      url: https://github.com/himanshukharemipl/audio_picker.git
+      ref: master
 
 dev_dependencies:
   flutter_lints: ^2.0.0

@@ -35,7 +35,7 @@ class _AppApis implements AppApis {
     )
             .compose(
               _dio.options,
-              'Author/Signin',
+              'Auth/Signin',
               queryParameters: queryParameters,
               data: _data,
             )

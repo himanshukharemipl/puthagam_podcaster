@@ -19,7 +19,7 @@ part 'app_apis.g.dart';
 abstract class AppApis {
   factory AppApis(Dio dio, {String baseUrl}) = _AppApis;
 
-  @POST("Author/Signin")
+  @POST("Auth/Signin")
   Future<HttpResponse<LoginResponse>> login(@Body() LoginParams params);
 
   @POST("Podcast/{id}")

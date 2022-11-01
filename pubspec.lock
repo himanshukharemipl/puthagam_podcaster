@@ -39,9 +39,11 @@ packages:
   audio_picker:
     dependency: "direct main"
     description:
-      name: audio_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: master
+      resolved-ref: df7a990466d8f8625321f5683588c777735a5dae
+      url: "https://github.com/himanshukharemipl/audio_picker.git"
+    source: git
     version: "1.0.0"
   audio_session:
     dependency: transitive
