@@ -7,11 +7,11 @@ import 'package:lottie/lottie.dart';
 import 'package:puthagam_podcaster/podcaster/core/resources/app_resources.dart';
 import 'package:puthagam_podcaster/podcaster/core/widgets/app_buttons.dart';
 import 'package:puthagam_podcaster/podcaster/core/widgets/build_network_image.dart';
+import 'package:puthagam_podcaster/podcaster/modules/home/controllers/home_controller.dart' as home_controller;
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../core/widgets/app_widgets.dart';
-import '../controllers/home_controller.dart' as home_controller;
 import 'audio_player.dart';
 
 class HomeView extends GetView<home_controller.HomeController> {
