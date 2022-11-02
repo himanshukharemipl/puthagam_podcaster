@@ -92,7 +92,7 @@ class BuildSingleEpisode extends StatelessWidget {
             : controller.showEpisodeUploadBtn(episode.endPodcast!)
                 ? Row(
                     children: [
-                      const Icon(
+                       Icon(
                         Icons.file_upload_outlined,
                         color: themeColor,
                       ),

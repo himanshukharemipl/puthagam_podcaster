@@ -13,7 +13,7 @@ import 'podcaster/core/resources/app_resources.dart';
 Future<void> main() async {
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: themeColor,
   ));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);

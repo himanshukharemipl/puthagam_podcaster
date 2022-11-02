@@ -53,7 +53,7 @@ class ButtonSecondary extends StatelessWidget {
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
-                        side: const BorderSide(color: themeColor)))),
+                        side: BorderSide(color: themeColor)))),
             child: title.text.color(themeColor).make())
         .w(double.infinity)
         .marginOnly(left: 20, right: 20);

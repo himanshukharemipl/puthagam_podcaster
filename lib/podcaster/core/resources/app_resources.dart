@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-const themeColor = Vx.blue500;
+Color themeColor = Vx.hexToColor("#A91481");

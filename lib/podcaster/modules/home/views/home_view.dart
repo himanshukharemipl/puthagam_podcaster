@@ -86,7 +86,7 @@ class HomeView extends GetView<home_controller.HomeController> {
                                     alignment: AlignmentDirectional.centerEnd,
                                     child: AudioWaveforms(
                                       size: const Size(double.infinity, 100),
-                                      waveStyle: const WaveStyle(
+                                      waveStyle:  WaveStyle(
                                           showMiddleLine: true,
                                           middleLineThickness: 2,
                                           showDurationLabel: true,
@@ -103,7 +103,7 @@ class HomeView extends GetView<home_controller.HomeController> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      const Icon(
+                                       Icon(
                                         Icons.mic_off_sharp,
                                         color: themeColor,
                                       ),
