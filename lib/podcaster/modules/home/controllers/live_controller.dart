@@ -15,7 +15,7 @@ import 'package:puthagam_podcaster/podcaster/modules/main/controllers/main_contr
 
 import '../../../core/utils/app_utils.dart';
 
-class HomeController extends GetxController {
+class LiveController extends GetxController {
   final count = 0.obs;
   FlutterRtmpStreamer? streamer;
   final showPlayer = false.obs;

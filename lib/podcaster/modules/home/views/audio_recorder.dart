@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:puthagam_podcaster/podcaster/modules/home/controllers/home_controller.dart';
+import 'package:puthagam_podcaster/podcaster/modules/home/controllers/live_controller.dart';
 import 'package:record/record.dart';
 
 class AudioRecorder extends StatefulWidget {
@@ -23,7 +23,7 @@ class _AudioRecorderState extends State<AudioRecorder> {
   RecordState _recordState = RecordState.stop;
   StreamSubscription<Amplitude>? _amplitudeSub;
   Amplitude? _amplitude;
-  final HomeController homeController = Get.find();
+  final LiveController homeController = Get.find();
 
   @override
   void initState() {
