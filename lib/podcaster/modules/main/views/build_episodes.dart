@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:puthagam_podcaster/podcaster/modules/home/views/home_view.dart';
+import 'package:puthagam_podcaster/podcaster/modules/home/views/home_view.dart' as homeview;
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../gen/assets.gen.dart';
@@ -11,7 +11,7 @@ import '../../../core/widgets/build_loading.dart';
 import '../../../domain/entities/episodes/get_episodes_response/datum.dart';
 import '../../../domain/params/podcast/go_live_podcast_params.dart';
 import '../../../routes/app_pages.dart';
-import '../../home/controllers/home_controller.dart';
+import '../../home/controllers/home_controller.dart' as homecontroller;
 import '../controllers/main_controller.dart';
 
 class BuildEpisodes extends StatelessWidget {
@@ -86,8 +86,8 @@ class BuildSingleEpisode extends StatelessWidget {
                 param.episodeName = episode.name ?? "";
                 param.podcastName = podcast.title ?? "";
                 param.podcastImage = podcast.image ?? "";
-                Get.lazyPut<HomeController>(() => HomeController(),);
-                Get.to(const HomeView(), arguments: param);
+                Get.lazyPut<homecontroller.HomeController>(() => homecontroller.HomeController(),);
+                Get.to(const homeview.HomeView(), arguments: param);
               })
             : controller.showEpisodeUploadBtn(episode.endPodcast!)
                 ? Row(

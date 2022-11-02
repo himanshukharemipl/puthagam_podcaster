@@ -11,10 +11,10 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../core/widgets/app_widgets.dart';
-import '../controllers/home_controller.dart';
+import '../controllers/home_controller.dart' as home_controller;
 import 'audio_player.dart';
 
-class HomeView extends GetView<HomeController> {
+class HomeView extends GetView<home_controller.HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
   @override
