@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -64,7 +64,7 @@ class BuildSingleEpisode extends StatelessWidget {
           children: [
             ("${index + 1}.${episode.name!}").text.bold.make(),
             5.heightBox,
-            (episode.content ?? "n/a").text.gray500.make(),
+            Html(data: (episode.content ?? "n/a")),
             10.heightBox,
             "${controller.getDate(episode.startPodcast!)} -  ${controller.getDate(episode.endPodcast!)}"
                 .text

@@ -21,6 +21,7 @@ dependencies:
   audio_waveforms: ^0.1.5+1
   lottie: 1.4.3
   just_audio: ^0.9.29
+  flutter_html: ^2.2.1
   flutter:
     sdk: flutter
   flutter_rtmp_streamer:

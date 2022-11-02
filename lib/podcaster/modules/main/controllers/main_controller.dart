@@ -34,6 +34,7 @@ class MainController extends GetxController
   String selectedPodcast = "";
   String selectEpisode = "";
   late TabController tabController;
+  final dateTimeFormat = DateFormat("dd MMM,hh:mm a");
 
   @override
   void onInit() {
@@ -108,15 +109,16 @@ class MainController extends GetxController
     }
   }
 
-  getDate(String date) {
-    return DateFormat("dd MMM,hh:mm a").format(DateTime.tryParse(date)!);
+  String getDate(String date) {
+    return dateTimeFormat.format(DateTime.tryParse(date)!);
   }
 
+ 
   bool showEpisodeRecordBtn(String startDate, String endDate) {
     bool showRecord = false;
-    final currentDateTime = DateTime.now();
-    final startDatetime = DateTime.parse(startDate);
-    final endDatetime = DateTime.parse(endDate);
+    final currentDateTime = getCurrentDate();
+    final startDatetime = dateTimeFormat.parse(getDate(startDate));
+    final endDatetime = dateTimeFormat.parse(getDate(endDate));
     if (currentDateTime.isAfter(startDatetime) &&
         currentDateTime.isBefore(endDatetime)) {
       showRecord = true;
@@ -124,10 +126,12 @@ class MainController extends GetxController
     return showRecord;
   }
 
+  DateTime getCurrentDate() => dateTimeFormat.parse(dateTimeFormat.format(DateTime.now()));
+
   bool showEpisodeUploadBtn(String endDate) {
     bool showUpload = false;
-    final currentDateTime = DateTime.now();
-    final endDatetime = DateTime.parse(endDate);
+    final currentDateTime =getCurrentDate();
+    final endDatetime = dateTimeFormat.parse(getDate(endDate));
     if (currentDateTime.isAfter(endDatetime)) {
       showUpload = true;
     }
@@ -151,7 +155,7 @@ class MainController extends GetxController
   String findRemainingTime(
     String startDate,
   ) {
-    final startDatetime = DateTime.parse(startDate);
-    return _daysBetween(DateTime.now(), startDatetime);
+    final startDatetime = dateTimeFormat.parse(getDate(startDate));
+    return _daysBetween(getCurrentDate(), startDatetime);
   }
 }
